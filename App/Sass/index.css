@@ -266,6 +266,9 @@ img {
   border-radius: 50%;
   box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.205);
 }
+.service_section .card h2 {
+  text-transform: capitalize;
+}
 .service_section .card p {
   text-align: center;
 }
@@ -296,4 +299,91 @@ img {
   bottom: 0;
   left: 0;
   height: 55px;
+}
+
+.feature_section {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
+  padding: 0 2rem;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.feature_section .left {
+  width: 65%;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 4rem;
+  flex-direction: column;
+}
+.feature_section .flex {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 80px;
+  flex-direction: row;
+}
+.feature_section .flex .flex_left,
+.feature_section .flex .flex_right {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(131, 131, 131, 0.5333333333);
+  padding-bottom: 1rem;
+}
+.feature_section .flex .flex_left .icon,
+.feature_section .flex .flex_right .icon {
+  padding: 20px;
+  border: 2px solid #0aceb1;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.feature_section .flex .flex_left .icon i,
+.feature_section .flex .flex_right .icon i {
+  width: 45px;
+  font-size: 40px;
+  color: #0aceb1;
+}
+.feature_section .flex .flex_left .icon:hover,
+.feature_section .flex .flex_right .icon:hover {
+  background-color: #1e72bc;
+  border-color: #1e72bc;
+  color: #fff;
+}
+.feature_section .flex .flex_left h2,
+.feature_section .flex .flex_right h2 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.feature_section .flex .flex_left p,
+.feature_section .flex .flex_right p {
+  font-size: 0.8rem;
+}
+
+.header_text {
+  text-align: center;
+  margin-top: 8rem;
+  font-size: 2.5rem;
+}
+.header_text span {
+  color: #1e72bc;
+}
+
+.divider {
+  width: 70px;
+  height: 2px;
+  background-color: rgba(131, 131, 131, 0.5333333333);
+  margin: auto;
+  margin-top: 0.7rem;
 }/*# sourceMappingURL=index.css.map */
