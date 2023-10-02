@@ -28,6 +28,12 @@ img {
   width: 100%;
   height: 65px;
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 2px rgba(128, 128, 128, 0.11);
   max-width: 1400px;
   margin: auto;
   display: flex;
@@ -55,6 +61,7 @@ img {
 }
 .nav ul button {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
   background-color: #1e72bc;
   padding: 0.6rem 0.8rem;
   border: 1px solid #1e72bc;
@@ -62,6 +69,11 @@ img {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
+}
+.nav ul button:hover {
+  background-color: transparent;
+  border-color: #1e72bc;
+  color: #1e72bc;
 }
 
 .hero_section {
@@ -83,10 +95,9 @@ img {
 }
 .hero_section .left_side {
   width: 70%;
-  text-align: center;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 30px;
   flex-direction: column;
@@ -97,7 +108,6 @@ img {
 }
 .hero_section .left_side p {
   font-size: 0.9rem;
-  text-align: justify;
 }
 .hero_section .left_side button {
   cursor: pointer;
@@ -119,4 +129,171 @@ img {
 .hero_section .right_side img {
   width: 160%;
   margin-top: 100px;
+}
+
+.about_section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+.about_section h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #1e72bc 0%, #0aceb1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about_section p {
+  font-size: 0.9rem;
+}
+.about_section img {
+  width: 200px;
+  opacity: 40%;
+}
+.about_section .flex_first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+.about_section .flex_first .left {
+  width: 45%;
+  text-transform: capitalize;
+}
+.about_section .flex_first .right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-direction: row;
+}
+.about_section .flex_second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  text-align: end;
+}
+.about_section .flex_second .right {
+  width: 45%;
+}
+.about_section .flex_second .right h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: linear-gradient(to left, #1e72bc 0%, #0aceb1 100%);
+  margin-bottom: 0.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about_section .flex_second .right p {
+  font-size: 0.9rem;
+}
+.about_section .flex_second .left {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-direction: row;
+}
+.about_section .flex_third {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
+  text-transform: capitalize;
+}
+.about_section .flex_third .left {
+  width: 45%;
+}
+.about_section .flex_third .right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-direction: row;
+}
+
+.service_section {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  background-image: url("../assets/bg_gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: row;
+  padding: 8rem 2rem;
+}
+.service_section .card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  position: relative;
+  padding: 4rem 2rem 1rem 2rem;
+}
+.service_section .card img {
+  width: 100px;
+  position: absolute;
+  top: -20%;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.205);
+}
+.service_section .card p {
+  text-align: center;
+}
+.service_section .card button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #1e72bc;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #1e72bc;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.service_section .card button:hover {
+  background-color: transparent;
+  border-color: #1e72bc;
+  color: #1e72bc;
+}
+.service_section .top_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 55px;
+}
+.service_section .bottom_layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
 }/*# sourceMappingURL=index.css.map */

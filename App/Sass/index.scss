@@ -15,13 +15,18 @@
   width: 100%;
   height: 65px;
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 2px rgba(128, 128, 128, 0.11);
 
   @include responsive_max_width;
 
   @include flex(center, space-between);
 
   padding: 0 2rem;
-  //   box-shadow: 2px 2px 5px 2px rgba(128, 128, 128, 0.199);
 
   .logo {
     width: 140px;
@@ -44,7 +49,14 @@
     }
     button {
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
       @include button($primary-color, #fff);
+
+      &:hover {
+        background-color: transparent;
+        border-color: $primary-color;
+        color: $primary-color;
+      }
     }
   }
 }
@@ -68,9 +80,8 @@
 
   .left_side {
     width: 70%;
-    text-align: center;
     color: #ffff;
-    @include flex(center, space-between, 30px, column);
+    @include flex(start, space-between, 30px, column);
 
     h2 {
       font-size: 3rem;
@@ -79,7 +90,6 @@
 
     p {
       font-size: 0.9rem;
-      text-align: justify;
     }
 
     button {
@@ -105,3 +115,159 @@
 }
 
 // about section
+.about_section {
+  @include responsive_max_width;
+  padding: 0 2rem;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(
+      to right,
+      $primary-color 0%,
+      $secondary_color 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  img {
+    width: 200px;
+    opacity: 40%;
+  }
+
+  .flex_first {
+    @include flex(center, space-between);
+    margin-bottom: 2rem;
+
+    .left {
+      width: 45%;
+      text-transform: capitalize;
+    }
+
+    .right {
+      width: 45%;
+      @include flex(center, center);
+    }
+  }
+
+  .flex_second {
+    @include flex(center, space-between);
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    text-align: end;
+
+    .right {
+      width: 45%;
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        background: linear-gradient(
+          to left,
+          $primary-color 0%,
+          $secondary_color 100%
+        );
+        margin-bottom: 0.5rem;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .left {
+      width: 45%;
+      @include flex(center, center);
+    }
+  }
+
+  .flex_third {
+    @include flex(center, space-between);
+    text-transform: capitalize;
+
+    .left {
+      width: 45%;
+    }
+
+    .right {
+      width: 45%;
+      @include flex(center, center);
+    }
+  }
+}
+
+// service section
+.service_section {
+  position: relative;
+  width: 100%;
+  @include responsive_max_width;
+  background-image: url("../assets/bg_gradient.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  @include flex(center, center, 40px);
+  padding: 8rem 2rem;
+
+  // cards
+  .card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 3px;
+    @include flex(center, center, 30px, column);
+    position: relative;
+    padding: 4rem 2rem 1rem 2rem;
+
+    img {
+      width: 100px;
+      position: absolute;
+      top: -20%;
+      background-color: #fff;
+      padding: 0.3rem;
+      border-radius: 50%;
+      box-shadow: 1px 1px 5px 1px rgba(128, 128, 128, 0.205);
+    }
+
+    p {
+      text-align: center;
+    }
+
+    button {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      @include button($primary-color, #fff);
+
+      &:hover {
+        background-color: transparent;
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+    }
+  }
+
+  // layers
+  .top_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 55px;
+  }
+  .bottom_layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+  }
+}
