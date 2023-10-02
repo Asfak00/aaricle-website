@@ -30,8 +30,11 @@ img {
   display: flex;
   max-width: 1400px;
   margin: auto;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
   padding: 0 2rem;
 }
 .nav .logo {
@@ -73,20 +76,28 @@ img {
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: justify-between;
+  gap: 0px;
+  flex-direction: row;
   padding: 0 2rem;
 }
 .hero_section .left_side {
+  width: 70%;
   text-align: center;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-direction: column;
 }
 .hero_section .left_side h2 {
   font-size: 3rem;
-  margin: 1.5rem;
+  text-transform: capitalize;
 }
 .hero_section .left_side p {
-  margin-bottom: 1.5rem;
   font-size: 0.9rem;
+  text-align: justify;
 }
 .hero_section .left_side button {
   cursor: pointer;

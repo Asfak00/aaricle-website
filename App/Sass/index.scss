@@ -15,10 +15,11 @@
   width: 100%;
   height: 65px;
   display: flex;
-  max-width: 1400px;
-  margin: auto;
-  align-items: center;
-  justify-content: space-between;
+
+  @include responsive_max_width;
+
+  @include flex(center, space-between);
+
   padding: 0 2rem;
   //   box-shadow: 2px 2px 5px 2px rgba(128, 128, 128, 0.199);
 
@@ -52,30 +53,33 @@
 .hero_section {
   width: 100%;
   position: relative;
-  max-width: 1400px;
-  margin: auto;
+
+  @include responsive_max_width;
+
   background-image: url("../assets/slide1.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  @include flex(center, justify-between);
+
   padding: 0 2rem;
 
   .left_side {
+    width: 70%;
     text-align: center;
     color: #ffff;
+    @include flex(center, space-between, 30px, column);
 
     h2 {
       font-size: 3rem;
-      margin: 1.5rem;
+      text-transform: capitalize;
     }
 
     p {
-      margin-bottom: 1.5rem;
       font-size: 0.9rem;
+      text-align: justify;
     }
 
     button {
@@ -99,3 +103,5 @@
     }
   }
 }
+
+// about section

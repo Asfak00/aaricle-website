@@ -7,3 +7,16 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
+@mixin flex($items, $content, $gap: 0px, $direction: row) {
+  display: flex;
+  align-items: $items;
+  justify-content: $content;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin responsive_max_width {
+  max-width: 1400px;
+  margin: auto;
+}
