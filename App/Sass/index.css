@@ -373,7 +373,7 @@ img {
 
 .header_text {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
   font-size: 2.5rem;
 }
 .header_text span {
@@ -386,4 +386,316 @@ img {
   background-color: rgba(131, 131, 131, 0.5333333333);
   margin: auto;
   margin-top: 0.7rem;
+}
+
+.header_divider .header_text {
+  margin-top: 0rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: semibold;
+}
+.header_divider .divider {
+  background-color: #fff;
+}
+
+.easy_step {
+  flex-direction: column;
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 8rem;
+}
+.easy_step .easy_step_flex {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  flex-direction: row;
+  color: white;
+  margin-top: 2rem;
+}
+.easy_step .easy_step_flex .easy_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.easy_step .easy_step_flex .easy_card i {
+  font-size: 2rem;
+}
+.easy_step .easy_step_flex .easy_card h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.table_price {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: auto;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.table_price .price_card {
+  border: 1px solid #dddcdc;
+  padding: 0.6rem;
+}
+.table_price .price_card .plan_name1 {
+  width: 100%;
+  background-color: #0aceb1;
+  color: #fff;
+  padding: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.table_price .price_card .plan_name2 {
+  width: 100%;
+  background-color: #1e72bc;
+  color: #fff;
+  padding: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.table_price .price_card .plan_price {
+  width: 50%;
+  margin: auto;
+  padding: 1.5rem;
+  text-align: center;
+  color: #1e72bc;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.table_price .price_card .plan_price h3 {
+  font-size: 2rem;
+}
+.table_price .price_card .plan_body {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.table_price .price_card .plan_body .btn1 {
+  background-color: #1e72bc;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #1e72bc;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.table_price .price_card .plan_body .btn2 {
+  background-color: #0aceb1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #0aceb1;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.contact_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1400px;
+  margin: auto;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.contact_section .maps iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact_section .contact_form {
+  background-color: #1e72bc;
+  padding: 3rem 5rem;
+  color: #fff;
+}
+.contact_section .contact_form h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contact_section .contact_form .form_divider {
+  width: 70px;
+  height: 3px;
+  margin-top: 0.3rem;
+  background-color: #fff;
+}
+.contact_section .contact_form p {
+  margin-top: 2rem;
+}
+.contact_section .contact_form form {
+  width: 100%;
+  margin-top: 1rem;
+}
+.contact_section .contact_form form input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  outline: 1px solid #1e72bc;
+  border: none;
+  border-radius: 2px;
+}
+.contact_section .contact_form form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  border-radius: 2px;
+  border: none;
+  outline: 1px solid #1e72bc;
+}
+.contact_section .contact_form form button {
+  background-color: #0aceb1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #0aceb1;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  cursor: pointer;
+}
+
+.footer_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.footer_section .section1 {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.footer_section .section1 img {
+  width: 140px;
+  cursor: pointer;
+}
+.footer_section .section1 p {
+  font-size: 0.9rem;
+}
+.footer_section .section2 {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.footer_section .section2 span {
+  font-weight: 600;
+}
+.footer_section .section2 p {
+  font-size: 0.9rem;
+}
+.footer_section .section3 {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-direction: column;
+}
+.footer_section .section3 p {
+  font-weight: 800;
+}
+.footer_section .section3 p i {
+  margin-right: 0.4rem;
+}
+.footer_section .section4 {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.footer_section .section4 .blog_card {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: row;
+}
+.footer_section .section4 .blog_card img {
+  width: 80px;
+}
+.footer_section .section4 .blog_card p {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+.footer_section .section4 .blog_card span {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.active {
+  color: #1e72bc;
+}
+
+.page_header_name {
+  width: 100%;
+  height: 300px;
+  background: url("../assets/slide1.png") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  max-width: 1400px;
+  margin: auto;
+}
+.page_header_name h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 5rem 4rem;
+}
+
+.screenshot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 8rem;
+  margin-top: 4rem;
+}
+
+.our_team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+.our_team .team_card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+}
+.our_team .team_card h2 {
+  text-transform: capitalize;
+  color: #1e72bc;
+}
+.our_team .team_card p {
+  text-transform: capitalize;
 }/*# sourceMappingURL=index.css.map */

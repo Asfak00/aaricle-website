@@ -4,9 +4,6 @@
 // reset code
 @import "./resets";
 
-// all mixins
-@import "./mixin";
-
 // all util classes
 @import "./utils.scss";
 
@@ -344,7 +341,7 @@
 
 .header_text {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
   font-size: 2.5rem;
 
   span {
@@ -358,4 +355,284 @@
   background-color: #83838388;
   margin: auto;
   margin-top: 0.7rem;
+}
+
+// easy steps
+.header_divider {
+  .header_text {
+    margin-top: 0rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: semibold;
+  }
+
+  .divider {
+    background-color: #fff;
+  }
+}
+
+.easy_step {
+  flex-direction: column;
+  @include responsive_max_width;
+  margin-bottom: 8rem;
+
+  .easy_step_flex {
+    width: 80%;
+    @include flex(center, space-between);
+    color: #ffff;
+    margin-top: 2rem;
+
+    .easy_card {
+      @include flex(center, center, 20px, column);
+
+      i {
+        font-size: 2rem;
+      }
+
+      h3 {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// table price
+.table_price {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 2rem;
+  @include responsive_max_width;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  .price_card {
+    border: 1px solid #dddcdc;
+    padding: 0.6rem;
+
+    .plan_name1 {
+      @include plan_name_button($secondary_color, #fff);
+    }
+
+    .plan_name2 {
+      @include plan_name_button($primary-color, #fff);
+    }
+
+    .plan_price {
+      width: 50%;
+      margin: auto;
+      padding: 1.5rem;
+      text-align: center;
+      color: $primary-color;
+      border-bottom: 1px solid rgb(212, 212, 212);
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+    .plan_body {
+      text-align: center;
+      padding: 1rem;
+      @include flex(center, center, 20px, column);
+      margin-top: 1.5rem;
+
+      .btn1 {
+        @include button($primary-color, #ffff);
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+
+      .btn2 {
+        @include button($secondary_color, #ffff);
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// contact section
+.contact_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include responsive_max_width;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  .maps {
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contact_form {
+    background-color: $primary-color;
+    padding: 3rem 5rem;
+    color: #fff;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .form_divider {
+      width: 70px;
+      height: 3px;
+      margin-top: 0.3rem;
+      background-color: #fff;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+
+    form {
+      width: 100%;
+      margin-top: 1rem;
+
+      input {
+        @include input;
+      }
+
+      textarea {
+        @include textarea;
+      }
+
+      button {
+        @include button($secondary_color, #fff);
+        margin-top: 0.8rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// footer section
+.footer_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  @include responsive_max_width;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+
+  .section1 {
+    @include flex(start, flex-start, 20px, column);
+
+    img {
+      width: 140px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .section2 {
+    @include flex(start, flex-start, 20px, column);
+
+    span {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .section3 {
+    @include flex(start, flex-start, 40px, column);
+
+    p {
+      font-weight: 800;
+
+      i {
+        margin-right: 0.4rem;
+      }
+    }
+  }
+
+  .section4 {
+    @include flex(start, flex-start, 20px, column);
+
+    .blog_card {
+      @include flex(start, flex-start, 10px);
+
+      img {
+        width: 80px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+      }
+
+      span {
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// active class from nav item
+.active {
+  color: $primary-color;
+}
+
+// page header name
+.page_header_name {
+  width: 100%;
+  height: 300px;
+  background: url("../assets/slide1.png") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  @include responsive_max_width;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 5rem 4rem;
+  }
+}
+
+// screenshot page
+.screenshot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include responsive_max_width;
+  margin-bottom: 8rem;
+  margin-top: 4rem;
+}
+
+// our team page
+.our_team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @include responsive_max_width;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+
+  .team_card {
+    text-align: center;
+    @include flex(center, center, 15px, column);
+
+    h2 {
+      text-transform: capitalize;
+      color: $primary-color;
+    }
+
+    p {
+      text-transform: capitalize;
+    }
+  }
 }
