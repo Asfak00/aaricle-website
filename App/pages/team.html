@@ -12,6 +12,9 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous" />
 
+      <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Aaricle Website</title>
     <link rel="stylesheet" href="../Sass/index.css" />
   <body>
@@ -65,25 +68,25 @@
     <h1 class="header_text">Our Team</h1>
     <div class="divider"></div>
     <section class="our_team">
-      <div class="team_card">
+      <div class="team_card" data-aos="zoom-in">
         <img src="../assets/t1.png" alt="team/image">
         <h2>jeson deal</h2>
         <p>designer</p>
       </div>
 
-      <div class="team_card">
+      <div class="team_card" data-aos="zoom-in">
          <img src="../assets/t2.png" alt="team/image">
         <h2>rinkal oberol</h2>
         <p>SEO</p>
       </div>
 
-      <div class="team_card">
+      <div class="team_card" data-aos="zoom-in">
        <img src="../assets/t3.png" alt="team/image">
         <h2>asfak ahmed</h2>
         <p>front-end developer</p>
       </div>
 
-      <div class="team_card">
+      <div class="team_card" data-aos="zoom-in">
          <img src="../assets/t4.png" alt="team/image">
         <h2>john doe</h2>
         <p>full stack developer</p>
@@ -177,5 +180,15 @@
 
 
     <script src="../Js/app.js"></script>
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 180,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
   </body>
 </html>

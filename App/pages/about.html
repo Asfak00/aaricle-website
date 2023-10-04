@@ -12,6 +12,9 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous" />
 
+      <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Aaricle Website</title>
     <link rel="stylesheet" href="../Sass/index.css" />
   <body>
@@ -61,7 +64,7 @@
       <h2>About Us</h2>
     </section>
 
-    <!-- about section -->
+     <!-- about section -->
     <section class="about_section" id="about">
       <div class="flex_first">
         <div class="left">
@@ -74,14 +77,14 @@
           </p>
         </div>
 
-        <div class="right">
+        <div class="right" data-aos="fade-down">
           <img src="../assets//ser3.png" alt="about/banner" />
         </div>
       </div>
 
       <!-- second flex -->
       <div class="flex_second">
-        <div class="left">
+        <div class="left" data-aos="fade-down">
           <img src="../assets/ser2.png" alt="about/banner" />
         </div>
         <div class="right">
@@ -107,14 +110,14 @@
           </p>
         </div>
 
-        <div class="right">
+        <div class="right" data-aos="fade-down">
           <img src="../assets/ser1.png" alt="about/banner" />
         </div>
       </div>
     </section>
 
     <!-- easy steps -->
-    <section class="service_section easy_step " id="about_easy">
+    <section class="service_section easy_step" id="easy">
       <div class="header_divider">
         <h1 class="header_text">Easy Steps</h1>
         <div class="divider"></div>
@@ -126,22 +129,22 @@
 
       <!-- middle section -->
       <div class="easy_step_flex">
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-gem"></i>
           <h3>go to app store</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-user"></i>
           <h3>create an account</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-download"></i>
           <h3>download & install</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-thumbs-up"></i>
           <h3>enjoy & rate us!</h3>
         </div>
@@ -234,5 +237,16 @@
     </footer>
 
     <script src="../Js/app.js"></script>
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 180,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
   </body>
 </html>

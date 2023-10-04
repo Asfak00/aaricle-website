@@ -12,6 +12,9 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous" />
 
+      <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Aaricle Website</title>
     <link rel="stylesheet" href="../Sass/index.css" />
   <body>
@@ -64,8 +67,8 @@
     <!-- pricing table -->
     <h1 class="header_text">Table <span> Price </span></h1>
     <div class="divider"></div>
-    <section class="table_price" id="pricing">
-      <div class="price_card">
+   <section class="table_price" id="pricing">
+      <div class="price_card" data-aos="flip-left">
         <div class="plan_name1"><h3>basic</h3></div>
         <div class="plan_price">
           <h3>$30.00</h3>
@@ -80,7 +83,7 @@
         </div>
       </div>
 
-      <div class="price_card">
+      <div class="price_card" data-aos="flip-left">
         <div class="plan_name2"><h3>standard</h3></div>
         <div class="plan_price">
           <h3>$40.00</h3>
@@ -95,7 +98,7 @@
         </div>
       </div>
 
-      <div class="price_card">
+      <div class="price_card" data-aos="flip-left">
         <div class="plan_name1"><h3>professional</h3></div>
         <div class="plan_price">
           <h3>$50.00</h3>
@@ -193,5 +196,15 @@
 
 
     <script src="../Js/app.js"></script>
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 180,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
   </body>
 </html>

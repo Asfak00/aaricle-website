@@ -12,6 +12,9 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous" />
 
+      <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Aaricle Website</title>
     <link rel="stylesheet" href="../Sass/index.css" />
   <body>
@@ -64,10 +67,11 @@
    <!-- feature section -->
     <h1 class="header_text">Aaricle <span> Service </span></h1>
     <div class="divider"></div>
-    <section class="feature_section">
+
+   <section class="feature_section">
       <div class="left">
         <div class="flex-1 flex">
-          <div class="flex_left">
+          <div class="flex_left" data-aos="zoom-in">
             <div class="icon">
               <i class="fab fa-wordpress"></i>
             </div>
@@ -80,7 +84,7 @@
             </div>
           </div>
 
-          <div class="flex_right">
+          <div class="flex_right" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-swatchbook"></i>
             </div>
@@ -95,7 +99,7 @@
         </div>
 
         <div class="flex-2 flex">
-          <div class="flex_left">
+          <div class="flex_left" data-aos="zoom-in">
             <div class="icon">
               <i class="fab fa-windows"></i>
             </div>
@@ -108,7 +112,7 @@
             </div>
           </div>
 
-          <div class="flex_right">
+          <div class="flex_right" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-cloud-upload-alt"></i>
             </div>
@@ -123,7 +127,7 @@
         </div>
 
         <div class="flex-3 flex">
-          <div class="flex_left">
+          <div class="flex_left" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-tag"></i>
             </div>
@@ -136,7 +140,7 @@
             </div>
           </div>
 
-          <div class="flex_right">
+          <div class="flex_right" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-chart-line"></i>
             </div>
@@ -151,7 +155,7 @@
         </div>
 
         <div class="flex-4 flex">
-          <div class="flex_left">
+          <div class="flex_left" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-file"></i>
             </div>
@@ -164,7 +168,7 @@
             </div>
           </div>
 
-          <div class="flex_right">
+          <div class="flex_right" data-aos="zoom-in">
             <div class="icon">
               <i class="fas fa-code"></i>
             </div>
@@ -179,7 +183,7 @@
         </div>
       </div>
 
-      <div class="right">
+      <div class="right" data-aos="fade-up">
         <img src="../assets/application_screen.png" alt="feature/image" />
       </div>
     </section>
@@ -197,22 +201,22 @@
 
       <!-- middle section -->
       <div class="easy_step_flex">
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-gem"></i>
           <h3>go to app store</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-user"></i>
           <h3>create an account</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-download"></i>
           <h3>download & install</h3>
         </div>
 
-        <div class="easy_card">
+        <div class="easy_card" data-aos="zoom-in">
           <i class="fas fa-thumbs-up"></i>
           <h3>enjoy & rate us!</h3>
         </div>
@@ -306,5 +310,16 @@
 
 
     <script src="../Js/app.js"></script>
+
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 180,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
   </body>
 </html>

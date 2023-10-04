@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
 
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- FONTAWESOME -->
     <link
       rel="stylesheet"
@@ -65,14 +68,14 @@
     <h1 class="header_text">Screenshots</h1>
     <div class="divider"></div>
     <section class="screenshot">
-      <img src="../assets/scr1.png" alt="screenshot/image">
-      <img src="../assets/scr3.png" alt="screenshot/image">
-      <img src="../assets/scr2.png" alt="screenshot/image">
-      <img src="../assets/scr1.png" alt="screenshot/image">
-      <img src="../assets/scr3.png" alt="screenshot/image">
-      <img src="../assets/scr2.png" alt="screenshot/image">
-      <img src="../assets/scr1.png" alt="screenshot/image">
-      <img src="../assets/scr3.png" alt="screenshot/image">
+      <img src="../assets/scr1.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr3.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr2.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr1.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr3.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr2.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr1.png" alt="screenshot/image" data-aos="zoom-in">
+      <img src="../assets/scr3.png" alt="screenshot/image" data-aos="zoom-in">
     </section>
 
      <!-- footer section -->
@@ -155,7 +158,16 @@
       </div>
     </footer>
 
-
+<!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 180,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
     <script src="../Js/app.js"></script>
   </body>
 </html>
