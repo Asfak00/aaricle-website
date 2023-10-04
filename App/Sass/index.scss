@@ -15,7 +15,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 999;
   background-color: #fff;
   box-shadow: 2px 2px 5px 2px rgba(128, 128, 128, 0.11);
 
@@ -25,14 +25,38 @@
 
   padding: 0 2rem;
 
+  .menuBar {
+    display: flex;
+
+    i {
+      font-size: 1.4rem;
+    }
+  }
+
   .logo {
-    width: 140px;
+    width: 110px;
+  }
+
+  // for mobile view
+  @include md {
+    .menuBar {
+      display: none;
+    }
+
+    .logo {
+      width: 140px;
+    }
   }
 
   ul {
-    display: flex;
     align-items: center;
     gap: 2rem;
+    display: none;
+
+    // for mobile view
+    @include md {
+      display: flex;
+    }
 
     li {
       a {
@@ -58,12 +82,55 @@
   }
 }
 
+// mobile toggle nav bar
+.mobile_toggle_nav {
+  @include flex(start, center);
+  background-color: $primary-color;
+  position: fixed;
+  top: 4rem;
+  right: 200%;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  // for mobile view
+  @include md {
+    display: none;
+  }
+
+  ul {
+    @include flex(center, center, 20px, column);
+    margin-top: 3rem;
+    li {
+      a {
+        color: #fff;
+      }
+
+      text-transform: capitalize;
+    }
+    button {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      @include button($secondary_color, #fff);
+    }
+  }
+}
+
+.toggle {
+  right: 0;
+}
+
 // hero section
 .hero_section {
   width: 100%;
   position: relative;
-
   @include responsive_max_width;
+  flex-direction: column;
+
+  @include md {
+    @include flex(center, justify-between);
+  }
 
   background-image: url("../assets/slide1.png");
   background-repeat: no-repeat;
@@ -71,18 +138,26 @@
   overflow: hidden;
   background-position: center;
 
-  @include flex(center, justify-between);
-
   padding: 0 2rem;
 
   .left_side {
-    width: 70%;
+    width: 100%;
+    @include md {
+      width: 70%;
+    }
     color: #ffff;
     @include flex(start, space-between, 30px, column);
 
     h2 {
-      font-size: 3rem;
+      font-size: 2rem;
       text-transform: capitalize;
+      margin-top: 2rem;
+    }
+    @include md {
+      h2 {
+        font-size: 3rem;
+        text-transform: capitalize;
+      }
     }
 
     p {
@@ -105,8 +180,15 @@
 
   .right_side {
     img {
-      width: 160%;
-      margin-top: 100px;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    @include md {
+      img {
+        width: 160%;
+        margin-top: 100px;
+      }
     }
   }
 }
@@ -142,11 +224,17 @@
   }
 
   .flex_first {
-    @include flex(center, space-between);
+    @include flex(center, center, 30px, column);
+    @include md {
+      @include flex(center, space-between);
+    }
     margin-bottom: 2rem;
 
     .left {
-      width: 45%;
+      width: 100%;
+      @include md {
+        width: 45%;
+      }
       text-transform: capitalize;
     }
 
@@ -157,13 +245,22 @@
   }
 
   .flex_second {
-    @include flex(center, space-between);
+    @include flex(center, center, 30px);
+    flex-direction: column-reverse;
+    @include md {
+      @include flex(center, space-between);
+    }
     margin-bottom: 2rem;
     text-transform: capitalize;
-    text-align: end;
-
+    text-align: start;
+    @include md {
+      text-align: end;
+    }
     .right {
-      width: 45%;
+      width: 100%;
+      @include md {
+        width: 45%;
+      }
 
       h2 {
         font-size: 1.6rem;
@@ -191,11 +288,17 @@
   }
 
   .flex_third {
-    @include flex(center, space-between);
+    @include flex(center, center, 30px, column);
+    @include md {
+      @include flex(center, space-between);
+    }
     text-transform: capitalize;
 
     .left {
-      width: 45%;
+      width: 100%;
+      @include md {
+        width: 45%;
+      }
     }
 
     .right {
@@ -215,7 +318,10 @@
   background-size: cover;
   overflow: hidden;
   background-position: center;
-  @include flex(center, center, 40px);
+  @include flex(center, center, 80px, column);
+  @include md {
+    @include flex(center, center, 40px);
+  }
   padding: 8rem 2rem;
 
   // cards
@@ -277,19 +383,33 @@
 .feature_section {
   width: 100%;
   @include responsive_max_width;
-  @include flex(start, space-between);
+  @include flex(center, center, 50px, column);
+
+  @include md {
+    @include flex(start, space-between);
+  }
   padding: 0 2rem;
   margin: auto;
   margin-top: 8rem;
   margin-bottom: 8rem;
 
   .left {
-    width: 65%;
+    width: 100%;
+    @include md {
+      width: 65%;
+    }
     @include flex(start, flex-start, 4rem, column);
   }
 
   .flex {
-    @include flex(start, space-between, 80px);
+    @include flex(center, center, 40px, column);
+    @include sm {
+      @include flex(start, space-between);
+      gap: 50px;
+    }
+    @include md {
+      @include flex(start, space-between, 80px);
+    }
 
     .flex_left,
     .flex_right {
@@ -377,8 +497,17 @@
   margin-bottom: 8rem;
 
   .easy_step_flex {
-    width: 80%;
-    @include flex(center, space-between);
+    width: 100%;
+    @include flex(center, center, 50px, column);
+    @include sm {
+      @include flex(start, space-between);
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @include md {
+      @include flex(center, space-between);
+      width: 80%;
+    }
     color: #ffff;
     margin-top: 2rem;
 
@@ -401,7 +530,13 @@
 // table price
 .table_price {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
   gap: 25px;
   padding: 0 2rem;
   @include responsive_max_width;
@@ -458,7 +593,10 @@
 // contact section
 .contact_section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include responsive_max_width;
   margin: auto;
   margin-top: 8rem;
@@ -467,13 +605,19 @@
   .maps {
     iframe {
       width: 100%;
-      height: 100%;
+      height: 450px;
+      @include md {
+        height: 100%;
+      }
     }
   }
 
   .contact_form {
     background-color: $primary-color;
-    padding: 3rem 5rem;
+    padding: 2rem;
+    @include md {
+      padding: 3rem 5rem;
+    }
     color: #fff;
 
     h1 {
@@ -516,7 +660,13 @@
 // footer section
 .footer_section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(4, 1fr);
+  }
   gap: 40px;
   @include responsive_max_width;
   padding: 0 2rem;
@@ -606,7 +756,13 @@
 // screenshot page
 .screenshot {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(4, 1fr);
+  }
   @include responsive_max_width;
   margin-bottom: 8rem;
   margin-top: 4rem;
@@ -615,7 +771,13 @@
 // our team page
 .our_team {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(4, 1fr);
+  }
   gap: 30px;
   @include responsive_max_width;
   padding: 0 2rem;
