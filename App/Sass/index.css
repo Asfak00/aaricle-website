@@ -504,6 +504,8 @@ img {
   }
 }
 
+/*  */
+
 @media (min-width: 1000px) {
   .feature_section .flex {
     display: flex;
