@@ -503,6 +503,7 @@ img {
     gap: 50px;
   }
 }
+
 @media (min-width: 1000px) {
   .feature_section .flex {
     display: flex;
@@ -956,4 +957,4 @@ img {
 }
 .our_team .team_card p {
   text-transform: capitalize;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
